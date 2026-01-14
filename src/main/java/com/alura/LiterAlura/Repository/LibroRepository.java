@@ -1,5 +1,5 @@
-package com.alura.LiterAlura.Repository;
-import com.alura.LiterAlura.Model.Libro;
+package main.java.com.alura.LiterAlura.Repository;
+import main.java.com.alura.LiterAlura.Model.Libro;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.data.jpa.repository.EntityGraph;

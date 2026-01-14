@@ -1,7 +1,7 @@
-package com.alura.LiterAlura;
+package main.java.com.alura.LiterAlura;
 
 
-import com.alura.LiterAlura.Controller.LibroController;
+import java.com.alura.LiterAlura.Controller.LibroController;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

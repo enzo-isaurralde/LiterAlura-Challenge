@@ -1,7 +1,7 @@
-package com.alura.LiterAlura.Controller;
+package main.java.com.alura.LiterAlura.Controller;
 
-import com.alura.LiterAlura.Service.LibroService;
-import com.alura.LiterAlura.Service.AutorService;
+import main.java.com.alura.LiterAlura.Service.LibroService;
+import main.java.com.alura.LiterAlura.Service.AutorService;
 import java.util.Scanner;
 import org.springframework.stereotype.Component;
 
@@ -71,7 +71,7 @@ public class LibroController {
     private void listarLibrosPorIdioma() {
         System.out.print("Ingrese el idioma (ej: 'es', 'en'): ");
         String idioma = scanner.nextLine();
-        libroService.buscarPorIdioma(idioma)
+        libroService.listarLibrosPorIdioma(idioma)
                 .forEach(System.out::println);
     }
 }

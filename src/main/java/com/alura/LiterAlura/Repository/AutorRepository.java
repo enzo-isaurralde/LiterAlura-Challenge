@@ -1,6 +1,6 @@
-package com.alura.LiterAlura.Repository;
+package main.java.com.alura.LiterAlura.Repository;
 
-import com.alura.LiterAlura.Model.Autor;
+import main.java.com.alura.LiterAlura.Model.Autor;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

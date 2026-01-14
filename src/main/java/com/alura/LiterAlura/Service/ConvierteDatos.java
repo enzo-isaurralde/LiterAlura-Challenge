@@ -1,12 +1,8 @@
-package com.alura.LiterAlura.Service;
+package main.java.com.alura.LiterAlura.Service;
 
 
-import com.alura.LiterAlura.Model.DatosLibro;
-import com.alura.LiterAlura.Model.RespuestaGutendex;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
-import java.util.List;
 
 /**
  * Implementación simple del conversor de JSON a objetos Java usando Jackson.
