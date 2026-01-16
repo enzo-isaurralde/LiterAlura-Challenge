@@ -1,8 +1,8 @@
-package main.java.com.alura.LiterAlura.Service;
+package com.alura.LiterAlura.Service;
 
 
-import main.java.com.alura.LiterAlura.Model.Autor;
-import main.java.com.alura.LiterAlura.Repository.AutorRepository;
+import com.alura.LiterAlura.Model.Autor;
+import com.alura.LiterAlura.Repository.AutorRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

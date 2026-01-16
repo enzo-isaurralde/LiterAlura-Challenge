@@ -1,7 +1,9 @@
-package main.java.com.alura.LiterAlura.Model;
+package com.alura.LiterAlura.Model;
 
 import jakarta.persistence.*;
 import java.util.List;
+import java.util.Set;
+
 
 @Entity
 public class Libro {
@@ -14,12 +16,12 @@ public class Libro {
 
     // Relación unidireccional: Libro -> Autor
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "libro_id") // crea la FK en la tabla Autor
-    private List<Autor> autores;
+    @JoinColumn(name = "libro_id")
+    private Set<Autor> autores;
 
-    // Lista de valores simples (Strings)
     @ElementCollection
-    private List<String> lenguajes;
+    private Set<String> lenguajes;
+
 
     private int totalDeDescargas;
 
@@ -41,11 +43,11 @@ public class Libro {
     public String getTitulo() { return titulo; }
     public void setTitulo(String titulo) { this.titulo = titulo; }
 
-    public List<Autor> getAutores() { return autores; }
-    public void setAutores(List<Autor> autores) { this.autores = autores; }
+    public Set<Autor> getAutores() { return autores; }
+    public void setAutores(Set<Autor> autores) { this.autores = autores; }
 
-    public List<String> getLenguajes() { return lenguajes; }
-    public void setLenguajes(List<String> lenguajes) { this.lenguajes = lenguajes; }
+    public Set<String> getLenguajes() { return lenguajes; }
+    public void setLenguajes(Set<String> lenguajes) { this.lenguajes = lenguajes; }
 
     public int getTotalDeDescargas() { return totalDeDescargas; }
     public void setTotalDeDescargas(int totalDeDescargas) { this.totalDeDescargas = totalDeDescargas; }

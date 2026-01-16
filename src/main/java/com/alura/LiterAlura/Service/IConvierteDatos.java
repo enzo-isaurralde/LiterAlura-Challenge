@@ -1,4 +1,4 @@
-package main.java.com.alura.LiterAlura.Service;
+package com.alura.LiterAlura.Service;
 
 public interface IConvierteDatos {
     // Contrato: dado un JSON y una clase, devolver una instancia de la clase mapeada.

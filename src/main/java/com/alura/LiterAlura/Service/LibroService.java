@@ -1,8 +1,8 @@
-package main.java.com.alura.LiterAlura.Service;
+package com.alura.LiterAlura.Service;
 
 import com.alura.LiterAlura.Model.*;
-import main.java.com.alura.LiterAlura.Repository.AutorRepository;
-import main.java.com.alura.LiterAlura.Repository.LibroRepository;
+import com.alura.LiterAlura.Repository.AutorRepository;
+import com.alura.LiterAlura.Repository.LibroRepository;
 import org.springframework.stereotype.Service;
 
 import java.net.URLEncoder;

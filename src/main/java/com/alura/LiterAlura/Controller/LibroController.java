@@ -1,7 +1,7 @@
-package main.java.com.alura.LiterAlura.Controller;
+package com.alura.LiterAlura.Controller;
 
-import main.java.com.alura.LiterAlura.Service.LibroService;
-import main.java.com.alura.LiterAlura.Service.AutorService;
+import com.alura.LiterAlura.Service.LibroService;
+import com.alura.LiterAlura.Service.AutorService;
 import java.util.Scanner;
 import org.springframework.stereotype.Component;
 

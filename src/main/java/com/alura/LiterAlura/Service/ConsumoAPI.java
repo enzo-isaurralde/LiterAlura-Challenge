@@ -1,4 +1,4 @@
-package main.java.com.alura.LiterAlura.Service;
+package com.alura.LiterAlura.Service;
 
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;

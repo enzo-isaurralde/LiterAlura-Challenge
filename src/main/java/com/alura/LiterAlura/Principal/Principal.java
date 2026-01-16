@@ -1,13 +1,13 @@
-package main.java.com.alura.LiterAlura.Principal;
+package com.alura.LiterAlura.Principal;
 
 
 
 
-import main.java.com.alura.LiterAlura.Model.DatosLibro;
-import main.java.com.alura.LiterAlura.Model.Libro;
-import main.java.com.alura.LiterAlura.Model.RespuestaGutendex;
-import main.java.com.alura.LiterAlura.Service.ConsumoAPI;
-import main.java.com.alura.LiterAlura.Service.ConvierteDatos;
+import com.alura.LiterAlura.Model.DatosLibro;
+import com.alura.LiterAlura.Model.Libro;
+import com.alura.LiterAlura.Model.RespuestaGutendex;
+import com.alura.LiterAlura.Service.ConsumoAPI;
+import com.alura.LiterAlura.Service.ConvierteDatos;
 
 import java.util.Scanner;
 
