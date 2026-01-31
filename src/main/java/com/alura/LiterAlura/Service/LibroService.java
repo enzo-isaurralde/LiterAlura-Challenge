@@ -34,7 +34,9 @@ public class LibroService {
                     .map(l -> new LibroDTO(
                             l.getId(),
                             l.getTitulo(),
-                            l.getAutores(),
+                            l.getAutores().stream()
+                                    .map(Autor::getName)
+                                    .collect(Collectors.toSet()),
                             l.getLenguajes(),
                             l.getTotalDeDescargas()
                     ))
@@ -54,7 +56,9 @@ public class LibroService {
         return List.of(new LibroDTO(
                 libro.getId(),
                 libro.getTitulo(),
-                libro.getAutores(),
+                libro.getAutores().stream()
+                                .map(Autor::getName)   // convertir entidad a String
+                                .collect(Collectors.toSet()),
                 libro.getLenguajes(),
                 libro.getTotalDeDescargas()
         ));
@@ -62,16 +66,19 @@ public class LibroService {
 
     // 📚 Listar todos los libros registrados
     public List<LibroDTO> listarLibros() {
-        return libroRepository.findAll().stream()
+        return libroRepository.findAllWithAutores().stream()
                 .map(l -> new LibroDTO(
                         l.getId(),
                         l.getTitulo(),
-                        l.getAutores(),
+                        l.getAutores().stream()
+                                .map(Autor::getName)   // convertir entidad a String
+                                .collect(Collectors.toSet()),
                         l.getLenguajes(),
                         l.getTotalDeDescargas()
                 ))
                 .collect(Collectors.toList());
     }
+
 
     // 🌍 Listar libros por idioma
     public List<LibroDTO> listarLibrosPorIdioma(String idioma) {
@@ -79,7 +86,9 @@ public class LibroService {
                 .map(l -> new LibroDTO(
                         l.getId(),
                         l.getTitulo(),
-                        l.getAutores(),
+                        l.getAutores().stream()
+                                .map(Autor::getName)
+                                .collect(Collectors.toSet()),
                         l.getLenguajes(),
                         l.getTotalDeDescargas()
                 ))

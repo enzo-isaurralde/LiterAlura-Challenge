@@ -10,7 +10,7 @@ import java.util.Set;
 public record LibroDTO(
         Long id,
        @JsonAlias ("title") String titulo,
-        @JsonAlias ("authors") Set<Autor> autores,
+        @JsonAlias ("authors") Set<String> autores,
         @JsonAlias("lenguages")Set<String> lenguajes,
         @JsonAlias("download_count") int totalDeDescargas
 ) {
