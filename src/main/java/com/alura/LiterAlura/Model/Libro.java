@@ -3,6 +3,7 @@ package com.alura.LiterAlura.Model;
 import jakarta.persistence.*;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 
 @Entity
@@ -31,7 +32,9 @@ public class Libro {
 
     public Libro(DatosLibro datosLibro) {
         this.titulo = datosLibro.titulo();
-        this.autores = datosLibro.autores();
+        this.autores = datosLibro.autores().stream()
+                .map(AutorDTO::toEntity)
+                .collect(Collectors.toSet());
         this.lenguajes = datosLibro.lenguajes();
         this.totalDeDescargas = datosLibro.totalDeDescargas();
     }

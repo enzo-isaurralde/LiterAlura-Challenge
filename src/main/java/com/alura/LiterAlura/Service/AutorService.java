@@ -16,9 +16,11 @@ public class AutorService {
         this.autorRepository = autorRepository;
     }
 
-    public List<Autor> listarAutores() {
-        return autorRepository.findAll();
+    public void listarAutores() {
+        List<Autor> autores = autorRepository.findAll();
+        autores.forEach(System.out::println);
     }
+
 
     public List<Autor> autoresVivosEnAnio(int anio) {
         return autorRepository.encontrarAutoresVivosEnAnio(anio);

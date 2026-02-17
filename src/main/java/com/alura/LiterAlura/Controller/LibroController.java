@@ -18,7 +18,7 @@ public class LibroController {
     }
 
     public void mostrarMenu() {
-        int opcion;
+        int opcion = -1;
         do {
             System.out.println("\n=== Menú LiterAlura ===");
             System.out.println("1 - Buscar libro por título");
@@ -28,8 +28,20 @@ public class LibroController {
             System.out.println("5 - Listar libros por idioma");
             System.out.println("0 - Salir");
             System.out.print("Elija la opción: ");
-            opcion = scanner.nextInt();
-            scanner.nextLine();
+            String input = scanner.nextLine().trim(); // leer como String
+
+            if (input.isEmpty()) {
+                // si no escribió nada, sigue en el bucle
+                System.out.println("Debe ingresar una opción.");
+                continue;
+            }
+
+            try {
+                opcion = Integer.parseInt(input);
+            } catch (NumberFormatException e) {
+                System.out.println("Opción inválida, ingrese un número.");
+                continue;
+            }
 
             switch (opcion) {
                 case 1 -> buscarLibroPorTitulo();
@@ -56,8 +68,8 @@ public class LibroController {
     }
 
     private void listarAutores() {
-        autorService.listarAutores()
-                .forEach(System.out::println);
+        autorService.listarAutores();
+
     }
 
     private void listarAutoresVivos() {

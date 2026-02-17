@@ -8,7 +8,7 @@ import java.util.Set;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public record DatosLibro(
         @JsonAlias("title") String titulo,
-        @JsonAlias("authors") Set<Autor> autores,
+        @JsonAlias("authors") Set<AutorDTO> autores,
         @JsonAlias("languages") Set<String> lenguajes,
         @JsonAlias("download_count") int totalDeDescargas
 ) {
